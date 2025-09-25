@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static, Class, and Instance Methods in Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Comparison of Static, Class, and Instance Methods in Python</h2>
+
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Static Method (<code>@staticmethod</code>)</th>
+            <th>Class Method (<code>@classmethod</code>)</th>
+            <th>Instance Method</th>
+        </tr>
+        <tr>
+            <td><b>Takes <code>self</code>?</b></td>
+            <td>❌ No</td>
+            <td>❌ No (<code>cls</code> instead)</td>
+            <td>✅ Yes</td>
+        </tr>
+        <tr>
+            <td><b>Takes <code>cls</code>?</b></td>
+            <td>❌ No</td>
+            <td>✅ Yes</td>
+            <td>❌ No</td>
+        </tr>
+        <tr>
+            <td><b>Can access class attributes?</b></td>
+            <td>❌ No</td>
+            <td>✅ Yes</td>
+            <td>✅ Yes</td>
+        </tr>
+        <tr>
+            <td><b>Can access instance attributes?</b></td>
+            <td>❌ No</td>
+            <td>❌ No</td>
+            <td>✅ Yes</td>
+        </tr>
+        <tr>
+            <td><b>Usage</b></td>
+            <td>Utility functions inside a class</td>
+            <td>Class-level operations</td>
+            <td>Object-specific operations</td>
+        </tr>
+    </table>
+
+</body>
+</html>
