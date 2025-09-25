@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python String Functions</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Python String Functions</h2>
+
+<table>
+    <tr>
+        <th>Function</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>len()</td>
+        <td>
+            Returns the number of characters in the string.
+            <br>If it happens: Returns the length as an integer value.
+            <br>If it doesn't happen: If the string is empty, it will return 0.
+        </td>
+        <td>len("hello") → 5</td>
+    </tr>
+    <tr>
+        <td>capitalize()</td>
+        <td>
+            Converts the first character to uppercase, and the rest to lowercase.
+            <br>If it happens: "hello" becomes "Hello".
+            <br>If it doesn't happen: If the string starts with a number or special character, no transformation occurs.
+        </td>
+        <td>"hello".capitalize() → "Hello"</td>
+    </tr>
+    <tr>
+        <td>title()</td>
+        <td>
+            Capitalizes the first letter of each word in the string.
+            <br>If it happens: "hello world" becomes "Hello World".
+            <br>If it doesn't happen: If the string has no words (only spaces or non-letter characters), it returns the string unchanged.
+        </td>
+        <td>"hello world".title() → "Hello World"</td>
+    </tr>
+    <tr>
+        <td>upper()</td>
+        <td>
+            Converts all characters in the string to uppercase.
+            <br>If it happens: "hello" becomes "HELLO".
+            <br>If it doesn't happen: If all characters are already uppercase, no change occurs.
+        </td>
+        <td>"hello".upper() → "HELLO"</td>
+    </tr>
+    <tr>
+        <td>lower()</td>
+        <td>
+            Converts all characters in the string to lowercase.
+            <br>If it happens: "HELLO" becomes "hello".
+            <br>If it doesn't happen: If all characters are already lowercase, no change occurs.
+        </td>
+        <td>"HELLO".lower() → "hello"</td>
+    </tr>
+    <tr>
+        <td>swapcase()</td>
+        <td>
+            Swaps the case of each character (uppercase becomes lowercase, and vice versa).
+            <br>If it happens: "Hello" becomes "hELLO".
+            <br>If it doesn't happen: If all characters are in the same case, they simply get swapped.
+        </td>
+        <td>"Hello".swapcase() → "hELLO"</td>
+    </tr>
+    <tr>
+        <td>strip()</td>
+        <td>
+            Removes any leading (before) or trailing (after) whitespace characters.
+            <br>If it happens: " hello " becomes "hello".
+            <br>If it doesn't happen: If there are no extra spaces, the string stays the same.
+        </td>
+        <td>" hello ".strip() → "hello"</td>
+    </tr>
+    <tr>
+        <td>find()</td>
+        <td>
+            Finds the first occurrence of a substring and returns its index.
+            <br>If it happens: It returns the index of the substring's first appearance.
+            <br>If it doesn't happen: If the substring is not found, it returns -1.
+        </td>
+        <td>"hello world".find("world") → 6</td>
+    </tr>
+    <tr>
+        <td>rfind()</td>
+        <td>
+            Finds the last occurrence of a substring and returns its index.
+            <br>If it happens: Returns the index of the last occurrence of the substring.
+            <br>If it doesn't happen: If the substring is not found, it returns -1.
+        </td>
+        <td>"hello world".rfind("o") → 7</td>
+    </tr>
+    <tr>
+        <td>count()</td>
+        <td>
+            Returns the number of occurrences of a specified substring.
+            <br>If it happens: It returns an integer count of how many times the substring appears.
+            <br>If it doesn't happen: If the substring is absent, it returns 0.
+        </td>
+        <td>"hello world".count("o") → 2</td>
+    </tr>
+    <tr>
+        <td>replace()</td>
+        <td>
+            Replaces occurrences of a substring with another substring.
+            <br>If it happens: Replaces all occurrences of the specified substring.
+            <br>If it doesn't happen: If the substring is not found, the original string remains unchanged.
+        </td>
+        <td>"hello world".replace("world", "Python") → "hello Python"</td>
+    </tr>
+    <tr>
+        <td>split()</td>
+        <td>
+            Splits the string into a list of substrings based on a delimiter.
+            <br>If it happens: If a delimiter is found, it returns a list of substrings.
+            <br>If it doesn't happen: If no delimiter is found, the entire string is returned as a list with a single element.
+        </td>
+        <td>"a,b,c".split(",") → ["a", "b", "c"]</td>
+    </tr>
+    <tr>
+        <td>rsplit()</td>
+        <td>
+            Splits the string into a list of substrings from the right, based on a delimiter.
+            <br>If it happens: It splits from the right-hand side of the string.
+            <br>If it doesn't happen: If no delimiter is found, the string is returned as a list with a single element.
+        </td>
+        <td>"a,b,c".rsplit(",", 1) → ["a", "b", "c"]</td>
+    </tr>
+    <tr>
+        <td>join()</td>
+        <td>
+            Joins elements of an iterable (like a list) into a string, using a separator.
+            <br>If it happens: Joins list elements with the given separator.
+            <br>If it doesn't happen: If the iterable is empty, it returns an empty string.
+        </td>
+        <td>", ".join(["a", "b", "c"]) → "a, b, c"</td>
+    </tr>
+    <tr>
+        <td>startswith()</td>
+        <td>
+            Checks if the string starts with a specified prefix.
+            <br>If it happens: Returns `True` if the string starts with the prefix.
+            <br>If it doesn't happen: Returns `False` if the string does not start with the prefix.
+        </td>
+        <td>"hello".startswith("he") → True</td>
+    </tr>
+    <tr>
+        <td>endswith()</td>
+        <td>
+            Checks if the string ends with a specified suffix.
+            <br>If it happens: Returns `True` if the string ends with the suffix.
+            <br>If it doesn't happen: Returns `False` if the string does not end with the suffix.
+        </td>
+        <td>"hello".endswith("lo") → True</td>
+    </tr>
+    <tr>
+        <td>isdigit()</td>
+        <td>
+            Checks if all characters in the string are digits.
+            <br>If it happens: Returns `True` if the string is entirely made up of digits.
+            <br>If it doesn't happen: Returns `False` if the string contains non-digit characters.
+        </td>
+        <td>"123".isdigit() → True</td>
+    </tr>
+    <tr>
+        <td>isalpha()</td>
+        <td>
+            Checks if all characters in the string are alphabetic.
+            <br>If it happens: Returns `True` if the string contains only alphabetic characters.
+            <br>If it doesn't happen: Returns `False` if the string contains digits or special characters.
+        </td>
+        <td>"abc".isalpha() → True</td>
+    </tr>
+    <tr>
+        <td>isalnum()</td>
+        <td>
+            Checks if all characters in the string are alphanumeric (letters or digits).
+            <br>If it happens: Returns `True` if the string contains only letters or digits.
+            <br>If it doesn't happen: Returns `False` if the string contains special characters or spaces.
+        </td>
+        <td>"abc123".isalnum() → True</td>
+    </tr>
+    <tr>
+        <td>format()</td>
+        <td>
+            Formats the string by inserting values into placeholders.
+            <br>If it happens: Inserts the specified values into the placeholders in the string.
+            <br>If it doesn't happen: If no values are provided for the placeholders, it will leave them empty or throw an error.
+        </td>
+        <td>"Hello, {}".format("Batman") → "Hello, Batman"</td>
+    </tr>
+    <tr>
+        <td>isupper()</td>
+        <td>
+            Checks if all characters in the string are uppercase.
+            <br>If it happens: Returns `True` if the string is in uppercase.
+            <br>If it doesn't happen: Returns `False` if the string contains lowercase letters.
+        </td>
+        <td>"HELLO".isupper() → True</td>
+    </tr>
+    <tr>
+        <td>islower()</td>
+        <td>
+            Checks if all characters in the string are lowercase.
+            <br>If it happens: Returns `True` if the string is in lowercase.
+            <br>If it doesn't happen: Returns `False` if the string contains uppercase letters.
+        </td>
+        <td>"hello".islower() → True</td>
+    </tr>
+    <tr>
+        <td>isspace()</td>
+        <td>
+            Checks if all characters in the string are whitespace.
+            <br>If it happens: Returns `True` if the string is made entirely of spaces or tabs.
+            <br>If it doesn't happen: Returns `False` if the string contains non-whitespace characters.
+        </td>
+        <td>"   ".isspace() → True</td>
+    </tr>
+    <tr>
+        <td>issubstring()</td>
+        <td>
+            Checks if the substring exists in the string.
+            <br>If it happens: Returns `True` if the substring is present.
+            <br>If it doesn't happen: Returns `False` if the substring is not found.
+        </td>
+        <td>"hello world".__contains__("hello") → True</td>
+    </tr>
+</table>
+
+</body>
+</html>

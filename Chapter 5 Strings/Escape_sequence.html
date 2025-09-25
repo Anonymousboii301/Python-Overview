@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Escape Sequences</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Python Escape Sequences</h2>
+
+<table>
+    <tr>
+        <th>Escape Sequence</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>\\</td>
+        <td>Backslash (used to escape other escape sequences)</td>
+        <td>"This is a backslash: \\"</td>
+    </tr>
+    <tr>
+        <td>\'</td>
+        <td>Single Quote (used to include a single quote in a string)</td>
+        <td>"It\'s a beautiful day!"</td>
+    </tr>
+    <tr>
+        <td>\"</td>
+        <td>Double Quote (used to include a double quote in a string)</td>
+        <td>"He said, \"Hello!\"" </td>
+    </tr>
+    <tr>
+        <td>\n</td>
+        <td>Newline (starts a new line)</td>
+        <td>"Hello\nWorld" (prints "Hello" on the first line and "World" on the second line)</td>
+    </tr>
+    <tr>
+        <td>\t</td>
+        <td>Tab (inserts a tab space)</td>
+        <td>"Hello\tWorld" (outputs: "Hello   World")</td>
+    </tr>
+    <tr>
+        <td>\r</td>
+        <td>Carriage Return (moves the cursor to the beginning of the line)</td>
+        <td>"Hello\rWorld" (outputs: "Worldo")</td>
+    </tr>
+    <tr>
+        <td>\b</td>
+        <td>Backspace (moves cursor one character back)</td>
+        <td>"Hello\bWorld" (outputs: "HellWorld")</td>
+    </tr>
+    <tr>
+        <td>\f</td>
+        <td>Form Feed (moves the cursor to the next page or form)</td>
+        <td>"Hello\fWorld" (depends on the environment)</td>
+    </tr>
+    <tr>
+        <td>\v</td>
+        <td>Vertical Tab (moves the cursor down vertically)</td>
+        <td>"Hello\vWorld" (depends on the environment)</td>
+    </tr>
+    <tr>
+        <td>\a</td>
+        <td>Bell (produces a bell sound in some systems)</td>
+        <td>"Hello\a" (produces a bell sound if supported)</td>
+    </tr>
+    <tr>
+        <td>\000</td>
+        <td>Octal value (represents a character using its octal value)</td>
+        <td>"\101" (outputs "A")</td>
+    </tr>
+    <tr>
+        <td>\xhh</td>
+        <td>Hexadecimal value (represents a character using its hexadecimal value)</td>
+        <td>"\x48" (outputs "H")</td>
+    </tr>
+</table>
+
+</body>
+</html>

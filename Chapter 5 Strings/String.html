@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python String Functions & Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #007BFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Python String Functions & Methods</h1>
+    
+    <h2>1. String Functions (Built-in)</h2>
+    <table>
+        <tr><th>Function</th><th>Description</th><th>What Happens If It Happens</th><th>What Happens If It Doesn't</th></tr>
+        <tr><td>len(str)</td><td>Returns the length of the string.</td><td>Returns the number of characters in the string.</td><td>Returns 0 if the string is empty.</td></tr>
+        <tr><td>str()</td><td>Converts an object to a string.</td><td>Returns a string representation of the object.</td><td>Returns an error if the object cannot be converted to a string.</td></tr>
+        <tr><td>repr(obj)</td><td>Returns a string representation of an object.</td><td>Provides a string representation suitable for debugging.</td><td>Returns a default string representation if the object doesn't have a custom one.</td></tr>
+        <tr><td>ord(char)</td><td>Returns the Unicode code point of a character.</td><td>Returns the Unicode code point (integer) of the character.</td><td>Raises a TypeError if the input is not a single character.</td></tr>
+        <tr><td>chr(int)</td><td>Returns the character for a Unicode code point.</td><td>Returns a string character corresponding to the code point.</td><td>Raises a ValueError if the code point is out of range.</td></tr>
+        <tr><td>ascii(obj)</td><td>Returns a string containing a printable representation of an object, escaping non-ASCII characters.</td><td>Converts non-ASCII characters to escape sequences.</td><td>May return an unchanged string if all characters are ASCII.</td></tr>
+        <tr><td>format(value, format_spec)</td><td>Formats a value according to a format specification.</td><td>Returns the formatted string.</td><td>Raises an error if the value doesn't match the format specifier.</td></tr>
+        <tr><td>bytes(str, encoding)</td><td>Converts a string to bytes using the specified encoding.</td><td>Returns a bytes object encoded with the specified encoding.</td><td>Raises a TypeError if the string cannot be encoded with the given encoding.</td></tr>
+        <tr><td>bytearray(str, encoding)</td><td>Converts a string to a mutable bytearray.</td><td>Returns a bytearray object that is mutable.</td><td>Raises a TypeError if the string cannot be encoded with the given encoding.</td></tr>
+    </table>
+    
+    <h2>2. String Methods</h2>
+    
+    <h3>A. Case Conversion</h3>
+    <table>
+        <tr><th>Method</th><th>Description</th><th>What Happens If It Happens</th><th>What Happens If It Doesn't</th></tr>
+        <tr><td>str.upper()</td><td>Converts all characters to uppercase.</td><td>Returns the string in uppercase.</td><td>Returns the same string if it's already in uppercase.</td></tr>
+        <tr><td>str.lower()</td><td>Converts all characters to lowercase.</td><td>Returns the string in lowercase.</td><td>Returns the same string if it's already in lowercase.</td></tr>
+        <tr><td>str.capitalize()</td><td>Capitalizes the first letter of the string.</td><td>Returns the string with the first character capitalized.</td><td>Returns the same string if it's already capitalized or has no alphabetic characters.</td></tr>
+        <tr><td>str.title()</td><td>Capitalizes the first letter of each word.</td><td>Returns the string with each word capitalized.</td><td>Returns the same string if no words are present or all are already capitalized.</td></tr>
+        <tr><td>str.swapcase()</td><td>Swaps uppercase letters to lowercase and vice versa.</td><td>Returns the string with cases swapped.</td><td>Returns the same string if all characters are already swapped.</td></tr>
+        <tr><td>str.casefold()</td><td>Converts to lowercase, more aggressive than lower().</td><td>Returns the string in lowercase, aggressively.</td><td>Returns the same string if it's already in lowercase.</td></tr>
+    </table>
+    
+    <h3>B. Formatting</h3>
+    <table>
+        <tr><th>Method</th><th>Description</th><th>What Happens If It Happens</th><th>What Happens If It Doesn't</th></tr>
+        <tr><td>str.center(width, fillchar)</td><td>Centers the string within the given width.</td><td>Returns the string centered within the width, padded with the fill character.</td><td>Returns the string as is if the width is smaller than the string length.</td></tr>
+        <tr><td>str.ljust(width, fillchar)</td><td>Left-aligns the string.</td><td>Returns the string left-aligned within the given width, padded with the fill character.</td><td>Returns the string as is if the width is smaller than the string length.</td></tr>
+        <tr><td>str.rjust(width, fillchar)</td><td>Right-aligns the string.</td><td>Returns the string right-aligned within the given width, padded with the fill character.</td><td>Returns the string as is if the width is smaller than the string length.</td></tr>
+        <tr><td>str.zfill(width)</td><td>Pads the string on the left with zeros.</td><td>Returns the string with leading zeros to match the specified width.</td><td>Returns the string as is if it's longer than the specified width.</td></tr>
+        <tr><td>str.expandtabs(tabsize)</td><td>Replaces tabs with spaces.</td><td>Returns the string with tabs replaced by spaces.</td><td>Returns the same string if there are no tabs.</td></tr>
+        <tr><td>str.format(*args, **kwargs)</td><td>Formats a string using placeholders {}.</td><td>Returns the formatted string with placeholders replaced by arguments.</td><td>Raises an error if there are mismatched placeholders and arguments.</td></tr>
+        <tr><td>str.format_map(mapping)</td><td>Similar to format(), but works with a dictionary directly.</td><td>Returns the formatted string using the dictionary.</td><td>Raises an error if the dictionary is missing a key for a placeholder.</td></tr>
+    </table>
+    
+    <h3>C. String Testing (Boolean Methods)</h3>
+    <table>
+        <tr><th>Method</th><th>Description</th><th>What Happens If It Happens</th><th>What Happens If It Doesn't</th></tr>
+        <tr><td>str.isalnum()</td><td>Returns True if all characters are alphanumeric.</td><td>Returns True if the string consists only of letters or digits.</td><td>Returns False if the string contains special characters or spaces.</td></tr>
+        <tr><td>str.isalpha()</td><td>Returns True if all characters are alphabetic.</td><td>Returns True if the string consists only of letters.</td><td>Returns False if the string contains digits or special characters.</td></tr>
+        <tr><td>str.isdigit()</td><td>Returns True if all characters are digits.</td><td>Returns True if the string consists only of digits.</td><td>Returns False if the string contains letters or special characters.</td></tr>
+        <tr><td>str.isnumeric()</td><td>Returns True if all characters are numeric.</td><td>Returns True if the string consists only of numeric characters.</td><td>Returns False if the string contains non-numeric characters.</td></tr>
+        <tr><td>str.isdecimal()</td><td>Returns True if all characters are decimal numbers.</td><td>Returns
